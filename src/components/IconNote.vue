@@ -1,0 +1,31 @@
+<template>
+    <div class="ic" style="margin right:10px">
+        <img class="ic" style="width:25px" :src="require('../components/Icons/add_alert.svg')" />
+        <img style="width:25px" class="ic" :src="require('../components/Icons/person.svg')" />
+        <img style="width:25px" class="ic" :src="require('../components/Icons/palette.svg')" />
+        <img style="width:25px" margin-right:20px class="ic" :src="require('../components/Icons/image.svg')" />
+        <img style="width:25px" class="ic" :src="require('../components/Icons/archive.svg')" />
+        <img style="width:25px" class="ic" :src="require('../components/Icons/more_vert.svg')" />
+    </div>
+</template>
+
+<script>
+export default {
+    name: "NoteIcons",
+
+}
+
+</script>
+
+<style scoped>
+.ic{
+ display: flex;
+flex-direction: row;
+/* justify-content: space-between; */
+gap: 10px;
+
+padding-top: 10px;
+padding-left: 5px;
+
+}
+</style>
