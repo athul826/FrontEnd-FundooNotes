@@ -125,7 +125,7 @@ export default {
 }
 
 .v-text-field {
-  width: 630px;
+  width: 640px;
 }
 
 .logos_on_right {
@@ -133,17 +133,18 @@ export default {
   flex-direction: row;
   padding-left: 150px;
 }
-
+/* 
 .v-list-item-title {
   color: #202124 !important;
   font-family: "Roboto", sans-serif !important;
-}
+} */
 
 .CreateNew {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 100px;
+  
 }
 
 .right_most_logos {
@@ -151,11 +152,6 @@ export default {
   display: flex;
   flex-direction: row;
   left: 100%;
-}
-
-.main_bpx {
-  padding: 0;
-  margin: 0;
 }
 
 </style>

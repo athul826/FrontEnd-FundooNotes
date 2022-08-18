@@ -143,8 +143,6 @@ export default {
   padding-bottom: -30px;
   padding-left: 100px;
   padding-top: 5px;
-  /* height: 100px; */
-  /* height: 10px; */
   width: 10px;
 }
 

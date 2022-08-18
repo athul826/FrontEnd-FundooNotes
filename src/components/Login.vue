@@ -104,6 +104,7 @@ export default {
         .then((data) => {
           console.log("response from login", data);
           localStorage.setItem("token",data.data.token);
+          this.$router.push ({path:'/dashboard'})
         })
         .catch((error) => {
           console.log(error);

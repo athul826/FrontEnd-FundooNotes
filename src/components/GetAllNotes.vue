@@ -32,6 +32,7 @@ export default {
           console.log("Response from getAllNotes", data);
           this.NotesArray = data.data.notes;
           console.log(this.NotesArray);
+          this.NotesArray.reverse()
         })
         .catch((error) => {
           console.log(error);

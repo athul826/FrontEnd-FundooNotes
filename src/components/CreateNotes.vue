@@ -4,9 +4,9 @@
       <v-card
         v-if="!show"
         @click="open"
-        elevation="10"
+        elevation="11"
         class="mx-auto pl-3"
-        height="50"
+        height="48"
         width="800"
       >
         <v-text-field
@@ -16,17 +16,19 @@
           solo
           flat
           hide-details
+          
         >
         </v-text-field>
         <div>
           <div class="button">
             <button
               class="iconbutton"
-              style="border: none; margin-left: 20px; margin-right: 20px"
+              style="border: none; margin-left: 50px; margin-right: 5px"
+              
             >
               <img class="takenoteicons" src="../assets/check_box.svg" />
             </button>
-            <button class="iconbutton" style="border: none; margin-right: 20px">
+            <button class="iconbutton" style="border: none; margin-right: 15px;margin-left: 15px;">
               <img class="takenoteicons" src="../assets/brush.svg" />
             </button>
             <button
@@ -59,9 +61,9 @@
             hide-details
           ></v-text-field>
           <div class="ft">
-            <NoteIcons></NoteIcons>
+            <CreateNoteIcons></CreateNoteIcons>
           </div>
-          <div class="cls">
+          <div class="clse_button">
             <v-btn small color="white" elevation="0" @click="CreateNotes()"
               >close</v-btn
             >
@@ -73,11 +75,10 @@
 </template>
 <script>
 import NoteService from "@/services/userservice/NoteService";
-// import NoteService from "@/services/userservice/NoteService";
-import NoteIcons from "@/components/IconNote.vue";
+import CreateNoteIcons from "./CreateNoteIcons.vue";
 export default {
   name: "CreateNotesComponent",
-  components: { NoteIcons },
+  components: { CreateNoteIcons },
   data() {
     return {
       noteDetails: {
@@ -119,17 +120,9 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  
 }
-.CN_Functions {
-  width: 497px;
-  height: 35px;
-  padding-top: 2px;
-}
-.functionity_setup {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
+
 .close {
   width: 50px;
   height: 100px;
@@ -140,30 +133,24 @@ export default {
 .iconbutton {
   margin-bottom: 1px;
   margin-top: -100px;
+  margin-left: 5px;
+  
 }
 .takenoteicons {
   width: 25px;
-  height: 22px;
-  opacity: 0.56;
+  height: 25px;
+  opacity: 0.50;
   border: none;
   background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.ft {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 10px;
-  padding-right: 100px;
-  margin-top: 10px;
-  margin-right: 10px;
-}
+
 .CreateNew {
   width: 600px;
   margin-left: 450px;
-  margin-top: 5px;
+  margin-top: -40px;
 }
 
 .button {
@@ -171,10 +158,11 @@ export default {
   flex-direction: row;
   justify-content: center;
   margin-top: 30px;
-  padding-right: 190px;
+  padding-right: 5px;
+  
 }
-.cls {
-  padding-left: 450px;
+.clse_button {
+  padding-left: 500px;
   margin-top: -20px;
 }
 </style>
