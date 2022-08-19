@@ -2,32 +2,31 @@
   <div class="text-center">
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn
+      <div style="margin-top: 4px; padding-left: 5px; width: 50px; ">
+        <v-img
+        style="width:20px" class="ic" :src="require('../components/Icons/more_vert.svg')"
           elevation="0"
           v-bind="attrs"
           v-on="on"
         >
-          <img style="width:20px" class="ic" :src="require('../components/Icons/more_vert.svg')" />
-        </v-btn>
+          <!-- <img style="width:20px" class="ic" :src="require('../components/Icons/more_vert.svg')" /> -->
+        </v-img>
+        </div>
       </template>
       <v-list>
         <v-list-item
-        
         >
           <v-list-item-title @click="deleteNote()">deleteNote </v-list-item-title>
-          <v-list-item-title>Add Label</v-list-item-title>
+         
         </v-list-item>
       </v-list>
     </v-menu>
   </div>
 </template>
+
 <script>
-//import NoteService from "@/services/userService/NoteService";
-
 import NoteService from '@/services/userservice/NoteService';
-
-  
-  export default {
+export default {
     data: () => ({
       items: [
         { title: 'Delete Note' },
@@ -47,10 +46,8 @@ import NoteService from '@/services/userservice/NoteService';
      // let reqData={id:this.noteId}
      let reqData = {
        id:this.noteId
-       
-      };
-
-      console.log(this.noteId)
+        };
+console.log(this.noteId)
       NoteService.prototype
         .deleteNote(reqData)
         .then((responce) => {
@@ -62,5 +59,4 @@ import NoteService from '@/services/userservice/NoteService';
     },
     }
   }
-  
 </script>

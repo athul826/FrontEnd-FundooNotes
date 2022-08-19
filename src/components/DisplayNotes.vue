@@ -13,7 +13,9 @@
       v-for="note in NoteListArray"
       :key="note.id"
     >
-      <v-card>
+    
+      <v-card >
+        <div :style="{ 'background-color': note.colour}">
         <div style="padding-left: 15px;padding-top: 5px;">
         <div @click="setNotedata(note)" @click.stop="showScheduleForm = true">
           <span>{{ note.title }}</span>
@@ -24,6 +26,7 @@
         </div>
         <div class="disply_box">
           <NoteIcons v-bind:NoteObject="note"></NoteIcons>
+        </div>
         </div>
       </v-card>
     </div>
@@ -59,7 +62,7 @@ export default {
 .disply_box {
   flex-direction: row;
   margin-top: 50px;
-  margin-right: 25px;
+  margin-right: -10px;
 }
 .display_note {
   width: 1100px;
@@ -71,5 +74,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   margin-right: 5px;
+  margin-left: -12px;
+  gap: 10px;
 } 
 </style>

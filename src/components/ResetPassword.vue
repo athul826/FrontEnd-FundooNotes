@@ -17,9 +17,7 @@
               <div class="heading_tag">
                 
                   <h3>Enter New Password</h3>
-                
-              </div>
-
+                </div>
               <div class="password_class">
                 <v-text-field
                   v-model="email"

@@ -10,12 +10,13 @@
       class="ic"
       :src="require('../components/Icons/person.svg')"
     />
-    <img
+    <!-- <img
     @click="colourNote()"
       style="width: 30px"
       class="ic"
       :src="require('../components/Icons/palette.svg')"
-    />
+    /> -->
+  <ColourMenu v-bind:noteId="NoteObject"></ColourMenu>
     <img
       style="width: 30px"
       margin-right:20px
@@ -37,12 +38,14 @@
 <script>
 import NoteService from "@/services/userservice/NoteService";
 import MoreVertMenu from "./MoreVertMenu.vue";
+import ColourMenu from "./ColourMenu.vue";
 
 export default {
   name: "NoteIcons",
-  components: { MoreVertMenu },
+  components: { MoreVertMenu, ColourMenu },
   props: {
     NoteObject: {},
+    colour:[],
     
   },
   methods: {

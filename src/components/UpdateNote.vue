@@ -16,14 +16,13 @@
                 </div>
                 </div>
             </div>
-            <div class="handle_icons "><IconNote></IconNote></div>
+            <div class="handle_icons "><IconNote v-bind:NoteObject="NoteData" ></IconNote></div>
             <div class="close_buttin">
             <v-card-actions>
                 <v-btn color="solid" @click.stop="show = false" @click="submit">Close</v-btn>
             </v-card-actions>
             </div>
         </v-card>
-
     </v-dialog>
 </template>
 
@@ -49,7 +48,6 @@ components : { IconNote},
     methods: {
         submit() {
             console.log("calling submit function");
-
             console.log(this.title)
             console.log(this.description)
             console.log(this.id);
@@ -58,8 +56,6 @@ components : { IconNote},
                 title: this.title,
                 description: this.description,
                 id: this.NoteData.id
-                
-
             }
 
             console.log(reqData)
@@ -102,6 +98,7 @@ components : { IconNote},
 
 }
 </script>
+
 <style scoped>
 .close_buttin {
   padding-left: 520px;
